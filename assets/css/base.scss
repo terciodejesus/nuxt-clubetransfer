@@ -1,0 +1,56 @@
+// Colors
+$green-lightest: #e8efe2;
+$green-lighter: #d3e3cb;
+$green-light: #a7c89e;
+$green-bluish: #008755;
+$green: #237814;
+$green-dark: #1e6511;
+$green-darker: #133e0b;
+
+$orange-lightest: #fef6ed;
+$orange-lighter: #fbe4ca;
+$orange-light: #f6ca9d;
+$orange: #e97e13;
+$orange-dark: #7a410a;
+
+$beige: #fffdf9;
+$beige-dark: #eee9e4;
+
+$red: #d23125;
+$red-dark: #681812;
+$brown: #7c3415;
+
+$white: #ffffff;
+$white-ter: #f4f4f4;
+
+$grey-lightest: #e7e7e7;
+$grey-lighter: #bebebe;
+$grey-light: #a39f98;
+$grey: #858380;
+$grey-dark: #666563;
+$grey-darker: #434240;
+$grey-darkest: #34312d;
+
+$pink-female: #f02e48;
+$blue-male: #017279;
+
+$black-ter: #262422;
+$black: #000000;
+
+$blue-light: #4285f4;
+$blue: #0c48ab;
+$blue-dark: #0d4b81;
+$blue-darkest: #0f161c;
+$blue-genex: #08948d;
+
+$cinder: #262d31;
+
+// Transition
+@mixin default-transition() {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+@import 'bulma/bulma.sass';

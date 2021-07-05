@@ -1,32 +1,46 @@
 <template>
-  <form @submit.prevent="sendEmail">
+  <form @submit.prevent="sendEmail" autocomplete="off">
     <div class="columns is-multiline">
       <div class="column is-6">
-        <input
-          class="input"
+        <AppInput
+          ref="nameInput"
           type="text"
-          placeholder="Nome"
           name="from_name"
-          required
+          placeholder="Seu nome"
+          :showMessage="false"
+          :showLabel="false"
+          :required="true"
+          :value="name"
+          @input="(e) => (name = e)"
         />
       </div>
       <div class="column is-6">
-        <input
+        <AppInput
           v-mask="['(##) ####-####', '(##) # ####-####']"
-          class="input"
+          ref="phoneInput"
           type="tel"
-          placeholder="Telefone"
-          required
           name="from_phone"
+          placeholder="Telefone"
+          :showMessage="false"
+          :showLabel="false"
+          :required="true"
+          :value="phone"
+          @input="(e) => (phone = e)"
         />
       </div>
       <div class="column is-12">
-        <input
-          class="input"
+        <AppInput
+          ref="emailInput"
           type="email"
-          placeholder="E-mail"
           name="from_email"
-          required
+          placeholder="Digite seu e-mail"
+          :required="true"
+          :error="emailInputError"
+          :showMessage="emailInputError"
+          :showLabel="false"
+          message="E-mail inválido! Tente novamente"
+          :value="email"
+          @input="(e) => (email = e)"
         />
       </div>
       <div class="column is-12">
@@ -38,21 +52,42 @@
         ></textarea>
       </div>
       <div class="column is-12">
-        <button class="button is-primary is-fullwidth">Fale conosco</button>
+        <button class="button is-primary is-fullwidth" :disabled="isDisabled">
+          Fale conosco
+        </button>
       </div>
     </div>
   </form>
 </template>
 
 <script type="module">
+import { ref, watch } from '@vue/composition-api'
+
+import AppInput from '~/components/AppInput'
+
 import { mask } from 'vue-the-mask'
 import emailjs from 'emailjs-com'
 
 export default {
+  components: {
+    AppInput,
+  },
   directives: {
     mask,
   },
   setup() {
+    const email = ref('')
+    const name = ref('')
+    const phone = ref('')
+    const emailInputError = ref(false)
+    const emailInput = ref(null)
+
+    const isDisabled = ref(true)
+    watch([email], () => {
+      isDisabled.value = emailInputError.value =
+        !emailInput.value.inputEl.checkValidity()
+    })
+
     const sendEmail = (e) => {
       emailjs
         .sendForm(
@@ -73,6 +108,12 @@ export default {
 
     return {
       sendEmail,
+      emailInputError,
+      email,
+      isDisabled,
+      emailInput,
+      name,
+      phone,
     }
   },
 }

@@ -1,4 +1,4 @@
-@import 'bulma/bulma.sass';
+@import 'base';
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -128,6 +128,12 @@ body {
     .image {
       display: inline-block;
       margin-bottom: 2rem;
+
+      img {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+      }
     }
   }
 
@@ -286,6 +292,8 @@ body {
 }
 
 .contact {
+  background-color: $white-ter;
+
   .title {
     font-size: 20px !important;
     display: block;
@@ -308,4 +316,68 @@ body {
   min-width: 144px;
   letter-spacing: 0.5px;
   font-weight: 500;
+}
+
+.textarea {
+  height: 40px;
+  border: 1px solid $grey-lighter;
+  box-shadow: none !important;
+  margin-bottom: 0.5rem;
+  @include default-transition();
+
+  & + label {
+    color: $grey-lighter;
+    position: absolute;
+    font-weight: 400;
+    z-index: 1;
+    letter-spacing: 0.4px;
+    font-size: 14px;
+    top: -1.5rem;
+    left: 1rem;
+  }
+
+  &::placeholder {
+    @include default-transition();
+    color: $grey-lighter;
+  }
+
+  &:placeholder-shown {
+    & + label {
+      color: $grey-dark;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $grey-dark;
+
+    & + label {
+      color: $grey-dark;
+    }
+
+    &::placeholder {
+      color: $grey-dark;
+    }
+  }
+
+  &:focus {
+    border: 2px solid $green !important;
+
+    &::placeholder {
+      color: $grey-lighter;
+    }
+
+    & + label {
+      font-weight: 600;
+      color: $green !important;
+    }
+  }
+
+  &.is-danger {
+    border: 2px solid $danger;
+
+    & + label {
+      font-weight: 600;
+      color: $danger;
+    }
+  }
 }

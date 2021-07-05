@@ -1,0 +1,145 @@
+@import 'base';
+
+.input-component {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 0.5rem;
+
+  &.is-horizontal {
+    flex-direction: row;
+    align-items: center;
+
+    label {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &.is-small {
+    .label {
+      font-size: 12px;
+    }
+
+    .input {
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+
+  .label {
+    @include default-transition();
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: $weight-normal;
+  }
+
+  .input {
+    @include default-transition();
+    height: 48px;
+
+    &:focus,
+    &:active {
+      border: inherit;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      @include default-transition();
+    }
+  }
+
+  .info {
+    @include default-transition();
+    margin-left: 1rem;
+    color: $grey-light;
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    bottom: -1.25rem;
+  }
+
+  .input-container.has-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 0.5rem;
+      fill: $grey-light;
+    }
+
+    .input {
+      padding-right: 2.5rem;
+    }
+  }
+
+  &.filled {
+    .label {
+      color: $grey-light;
+    }
+  }
+
+  &.hovered {
+    .label {
+      color: $text;
+      font-weight: $weight-semibold;
+    }
+
+    .input {
+      border: 1px solid $black-ter;
+
+      &::placeholder {
+        color: $grey-dark;
+      }
+    }
+
+    .info {
+      color: $text;
+    }
+  }
+
+  &.focused {
+    .label {
+      color: $green;
+      font-weight: $weight-semibold;
+    }
+
+    .input {
+      box-shadow: none;
+      border: 2px solid $green;
+    }
+
+    .info {
+      color: $green;
+    }
+  }
+
+  &.error {
+    .label {
+      color: $red;
+      font-weight: $weight-semibold;
+    }
+
+    .input {
+      box-shadow: none;
+      border: 2px solid $red;
+    }
+
+    .info {
+      color: $red;
+    }
+  }
+
+  &.disabled {
+    .label {
+      color: $grey-light;
+    }
+
+    .input {
+      background-color: $beige-dark;
+    }
+  }
+}

@@ -58,7 +58,7 @@
                   <figure class="image is-128x128">
                     <img
                       class="is-rounded"
-                      src="https://bulma.io/images/placeholders/128x128.png"
+                      src="~/assets/images/quem_somos_1.jpg"
                     />
                   </figure>
                   <span class="title">Sobre o Clube Transfer Receptivo</span>
@@ -78,7 +78,7 @@
                   <figure class="image is-128x128">
                     <img
                       class="is-rounded"
-                      src="https://bulma.io/images/placeholders/128x128.png"
+                      src="~/assets/images/quem_somos_2.jpg"
                     />
                   </figure>
                   <span class="title">Porque Viajar com o Clube Transfer</span>
@@ -98,7 +98,7 @@
                   <figure class="image is-128x128">
                     <img
                       class="is-rounded"
-                      src="https://bulma.io/images/placeholders/128x128.png"
+                      src="~/assets/images/quem_somos_3.jpg"
                     />
                   </figure>
                   <span class="title">Transfer programado</span>
@@ -308,7 +308,7 @@
                 <div class="card-image">
                   <figure class="image is-128x128">
                     <img
-                      src="~/assets/images/party_day.jpg"
+                      src="~/assets/images/city_tour.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
