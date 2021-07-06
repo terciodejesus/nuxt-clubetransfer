@@ -52,9 +52,25 @@
         ></textarea>
       </div>
       <div class="column is-12">
-        <button class="button is-primary is-fullwidth" :disabled="isDisabled">
+        <button
+          v-if="!messageSent"
+          class="button is-primary is-fullwidth"
+          :disabled="isDisabled"
+          :class="{ 'is-loading': submitting }"
+        >
+          <font-awesome-icon :icon="['far', 'paper-plane']" class="mr-2" />
           Fale conosco
         </button>
+        <div v-if="messageSent" class="notification is-primary is-light">
+          Mensagem enviada com sucesso! Entraremos em contato o mais breve
+          possível.
+        </div>
+        <div
+          v-if="messageSent == false"
+          class="notification is-danger is-light"
+        >
+          Não foi possível enviar a mensagem. Tente novamente.
+        </div>
       </div>
     </div>
   </form>
@@ -82,13 +98,23 @@ export default {
     const emailInputError = ref(false)
     const emailInput = ref(null)
 
+    const submitting = ref(false)
     const isDisabled = ref(true)
-    watch([email], () => {
-      isDisabled.value = emailInputError.value =
-        !emailInput.value.inputEl.checkValidity()
+    watch([email, submitting], () => {
+      isDisabled.value =
+        !emailInput.value.inputEl.checkValidity() || submitting.value
+
+      if (!emailInput.value.inputEl.checkValidity()) {
+        emailInputError.value = true
+      } else {
+        emailInputError.value = false
+      }
     })
 
+    const messageSent = ref(null)
     const sendEmail = (e) => {
+      submitting.value = true
+
       emailjs
         .sendForm(
           'service_kokm0v8',
@@ -99,9 +125,13 @@ export default {
         .then(
           (result) => {
             console.log('SUCCESS!', result.status, result.text)
+            messageSent.value = true
+            submitting.value = false
           },
           (error) => {
             console.log('FAILED...', error)
+            messageSent.value = false
+            submitting.value = false
           }
         )
     }
@@ -114,6 +144,8 @@ export default {
       emailInput,
       name,
       phone,
+      messageSent,
+      submitting,
     }
   },
 }

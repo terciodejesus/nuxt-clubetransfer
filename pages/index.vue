@@ -413,6 +413,7 @@
               </div>
             </div>
             <div class="column is-6">
+              <span class="title">Fale conosco</span>
               <ContactForm />
             </div>
           </div>
