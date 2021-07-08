@@ -32,8 +32,8 @@
 
             <p>
               O <span class="has-text-weight-semibold">Guia</span> seleciona
-              Diversas ONGs e Ações Culturais para Ajudar Dentro de SEUS
-              Roteiros de Passeios guiados. Assim além de te ajudar, ajudamos o
+              diversas ONGs e ações culturais para ajudar dentro de seus
+              roteiros de passeios guiados. Assim além de te ajudar, ajudamos o
               próximo.
             </p>
           </div>

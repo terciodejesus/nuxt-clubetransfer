@@ -38,10 +38,14 @@
               >Clube Transfer Receptivo</span
             >
           </p>
-          <button class="button" href="">
+          <a
+            class="button"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+          >
             <font-awesome-icon :icon="['fab', 'whatsapp']" />
             Reservar
-          </button>
+          </a>
         </div>
       </div>
     </section>

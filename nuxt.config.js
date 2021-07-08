@@ -1,14 +1,16 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Clube Transfer',
+    title: 'Clube Transfer Receptivo',
     htmlAttrs: {
       lang: 'pt-br'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
+      { hid: 'og:title', property: 'og:title', content: 'Clube Transfer Receptivo' },
+      { hid: 'og:description', property: 'og:description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
