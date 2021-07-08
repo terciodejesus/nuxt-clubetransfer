@@ -1,0 +1,70 @@
+@import 'base';
+
+.modal {
+  z-index: 101;
+
+  .modal-background {
+    background-color: rgba($black, 0.4);
+    backdrop-filter: blur(2px);
+  }
+
+  .modal-content {
+    background-color: $beige;
+    position: relative;
+    padding: 24px 32px 32px 32px;
+    border-radius: 24px;
+    box-shadow: 0px 2px 4px rgba($black, 0.4);
+    min-width: 40%;
+    width: 50vw;
+
+    @include mobile {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      width: unset;
+      max-height: 100vh;
+    }
+
+    @include tablet {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .modal-header {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      justify-content: center;
+      height: 2rem;
+
+      .delete {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 20px;
+        width: 20px;
+        background: none;
+        font-size: 16px;
+
+        &:before {
+          background-color: $black;
+          width: 100%;
+        }
+
+        &:after {
+          background-color: $black;
+          height: 100%;
+        }
+      }
+    }
+
+    .modal-body {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

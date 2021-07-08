@@ -65,12 +65,9 @@
                   <p class="description">
                     O Clube Transfer Receptivo nasceu com o propósito de trazer
                     mais qualidade nas viagens do aeroporto até os hóteis e
-                    eventos. Para nós, fazer sua viajem de transfer é acumular
-                    um patrimônio pessoal, é vivenciar emoções e momentos
-                    inesquecíveis ao lado das famílias, de amigos e de pessoas
-                    especiais.
+                    eventos.
                   </p>
-                  <a class="button">Saiba mais</a>
+                  <a class="button" @click="setModal(1)">Saiba mais</a>
                 </div>
               </div>
               <div class="column is-4">
@@ -85,12 +82,9 @@
                   <p class="description">
                     Acreditamos que as viagens, além de nos trazer bem-estar,
                     podem transformar nossa visão de mundo e nos tornar
-                    culturalmente mais ricos. E é por isso que dedicamos a
-                    realizar sonhos de viagens de milhares de brasileiros ao
-                    proporcionar que nossos clientes parceiros viajem em suas
-                    férias com todo conforto segurança.
+                    culturalmente mais ricos.
                   </p>
-                  <a class="button">Saiba mais</a>
+                  <a class="button" @click="setModal(2)">Saiba mais</a>
                 </div>
               </div>
               <div class="column is-4">
@@ -105,14 +99,9 @@
                   <p class="description">
                     Com o Transfer programado, nossos clientes criam um
                     compromisso com a sua qualidade de vida e contam com os
-                    benefícios que só o Clube Transfer Receptivo pode oferecer,
-                    como flexibilidade, comodidade, economia e, principalmente
-                    com a possibilidade de viajar para os resorts, hoteis e
-                    pousadas com maior conforto e segunça. Além disso, o Clube
-                    Transfer Receptivo contam com consultores preparados, para
-                    facilitar ainda mais o planejamento das suas viagens.
+                    benefícios que só o Clube Transfer Receptivo pode oferecer.
                   </p>
-                  <a class="button">Saiba mais</a>
+                  <a class="button" @click="setModal(3)">Saiba mais</a>
                 </div>
               </div>
             </div>
@@ -420,15 +409,39 @@
         </div>
       </div>
     </section>
+    <InfoModal
+      :openModal="openModal"
+      :modalType="modalType"
+      @close="openModal = !openModal"
+    />
   </div>
 </template>
 
 <script>
+import { ref } from '@vue/composition-api'
+
 import ContactForm from '~/components/ContactForm'
+import InfoModal from '~/components/InfoModal'
 
 export default {
   components: {
     ContactForm,
+    InfoModal,
+  },
+  setup() {
+    const openModal = ref(false)
+    const modalType = ref(0)
+
+    const setModal = (e) => {
+      openModal.value = true
+      modalType.value = e
+    }
+
+    return {
+      openModal,
+      modalType,
+      setModal,
+    }
   },
 }
 </script>
