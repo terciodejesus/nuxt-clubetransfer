@@ -28,6 +28,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {
+      src: './plugins/GoogleAnalytics.js',
+      mode: 'client'
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -59,8 +63,17 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
-    'nuxt-buefy'
+    'nuxt-buefy',
+    'nuxt-facebook-pixel-module'
   ],
+
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '1995213760653850',
+    autoPageView: true,
+    disabled: false
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
