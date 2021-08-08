@@ -7,7 +7,7 @@
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
-                <img src="~/assets/images/logo.webp" alt="Logo" />
+                <img class="logo" src="~/assets/images/logo.webp" alt="Logo" />
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroC">
                 <span></span>
@@ -18,10 +18,10 @@
             <div id="navbarMenuHeroC" class="navbar-menu">
               <div class="navbar-end">
                 <a class="navbar-item"> Início </a>
-                <a class="navbar-item"> Quem somos </a>
-                <a class="navbar-item"> Viagens </a>
-                <a class="navbar-item"> Serviços </a>
-                <a class="navbar-item"> Contato </a>
+                <a href="#about" class="navbar-item"> Quem somos </a>
+                <a href="#destinations" class="navbar-item"> Viagens </a>
+                <a href="#services" class="navbar-item"> Serviços </a>
+                <a href="#contact" class="navbar-item"> Contato </a>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <section class="hero is-relative about">
+    <section id="about" class="hero is-relative about">
       <div class="hero-body">
         <div class="container">
           <div class="box">
@@ -114,11 +114,11 @@
       </div>
     </section>
 
-    <section class="hero destinations">
-      <div class="hero-body">
+    <section id="destinations" class="hero destinations">
+      <div class="hero-body pb-0">
         <div class="container">
           <span class="title">Viagens</span>
-          <p class="description">
+          <p class="description is-hidden">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's
           </p>
@@ -193,6 +193,21 @@
       </div>
     </section>
 
+    <section class="hero">
+      <div class="hero-body">
+        <div class="has-text-centered">
+          <a
+            class="button cta-button"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+          >
+            <font-awesome-icon :icon="['fab', 'whatsapp']" />
+            Reservar Agora
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="hero is-medium results is-relative">
       <div class="hero-body">
         <div class="container">
@@ -204,7 +219,7 @@
                     <font-awesome-icon :icon="['fas', 'map-marked-alt']" />
                   </div>
                   <div>
-                    <p class="title">179</p>
+                    <p class="title">+50</p>
                     <p class="heading">Destinos</p>
                   </div>
                 </div>
@@ -213,7 +228,7 @@
                     <font-awesome-icon :icon="['fas', 'car']" />
                   </div>
                   <div>
-                    <p class="title">200</p>
+                    <p class="title">+200</p>
                     <p class="heading">Viagens</p>
                   </div>
                 </div>
@@ -226,7 +241,7 @@
                     <font-awesome-icon :icon="['fas', 'smile-wink']" />
                   </div>
                   <div>
-                    <p class="title">331</p>
+                    <p class="title">+120</p>
                     <p class="heading">Clientes</p>
                   </div>
                 </div>
@@ -235,7 +250,7 @@
                     <font-awesome-icon :icon="['fas', 'heart']" />
                   </div>
                   <div>
-                    <p class="title">1000</p>
+                    <p class="title">+300</p>
                     <p class="heading">Likes</p>
                   </div>
                 </div>
@@ -245,7 +260,7 @@
         </div>
       </div>
     </section>
-    <section class="hero services">
+    <section id="services" class="hero services">
       <div class="hero-body">
         <div class="container">
           <span class="title">Serviços</span>
@@ -341,7 +356,7 @@
       </div>
     </section>
 
-    <section class="hero contact">
+    <section id="contact" class="hero contact">
       <div class="hero-body">
         <div class="container">
           <div class="columns">
@@ -418,11 +433,20 @@
       :modalType="modalType"
       @close="openModal = !openModal"
     />
+
+    <a
+      target="_blank"
+      href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+    >
+      <div class="floating-whatsapp">
+        <font-awesome-icon :icon="['fab', 'whatsapp']" />
+      </div>
+    </a>
   </div>
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
+import { ref, onMounted } from '@vue/composition-api'
 
 import ContactForm from '~/components/ContactForm'
 import InfoModal from '~/components/InfoModal'

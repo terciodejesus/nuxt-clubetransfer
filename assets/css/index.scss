@@ -1,5 +1,9 @@
 @import 'base';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #262422;
@@ -13,6 +17,11 @@ body {
     &:hover {
       background-color: transparent;
       color: darken(white, 10%);
+    }
+
+    .logo {
+      width: 120px;
+      max-height: 120px;
     }
   }
 }
@@ -380,5 +389,38 @@ body {
       font-weight: 600;
       color: $danger;
     }
+  }
+}
+
+.floating-whatsapp {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  background-color: #5ccb5a;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: $white;
+
+  svg {
+    fill: $white;
+    width: 25px !important;
+    height: 25px;
+  }
+}
+
+.cta-button {
+  background-color: #d44224;
+  color: white;
+
+  &:hover {
+    color: $white;
+  }
+
+  svg {
+    margin-right: 0.5rem;
   }
 }
