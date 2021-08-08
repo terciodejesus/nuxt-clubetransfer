@@ -7,7 +7,7 @@
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
-                <img class="logo" src="~/assets/images/logo.webp" alt="Logo" />
+                <img class="logo" src="~/assets/images/logo.jpg" alt="Logo" />
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroC">
                 <span></span>
@@ -128,7 +128,7 @@
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img
-                      src="~/assets/images/sauipe.jpg"
+                      src="~/assets/images/destinos/sauipe.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
@@ -141,7 +141,7 @@
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img
-                      src="~/assets/images/vila_gale.jpg"
+                      src="~/assets/images/destinos/vila_gale_mares.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
@@ -154,7 +154,7 @@
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img
-                      src="~/assets/images/tivoli.jpg"
+                      src="~/assets/images/destinos/tivoli_praia.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
@@ -167,7 +167,7 @@
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img
-                      src="~/assets/images/iberostar.jpg"
+                      src="~/assets/images/destinos/iberostar.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
@@ -180,7 +180,7 @@
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img
-                      src="~/assets/images/grand_palladium.jpg"
+                      src="~/assets/images/destinos/grand_palladium.jpg"
                       alt="Placeholder image"
                     />
                   </figure>
