@@ -10,7 +10,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
       { hid: 'og:title', property: 'og:title', content: 'Clube Transfer Receptivo' },
-      { hid: 'og:description', property: 'og:description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' }
+      { hid: 'og:description', property: 'og:description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
+      { hid: 'og:image', property: 'og:image', content: '@/assets/images/logo_og.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
