@@ -1,27 +1,66 @@
 <template>
   <div>
-    <section class="hero is-fullheight presentation">
+    <section id="home" class="hero is-fullheight presentation">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
-        <header class="navbar">
+        <header class="navbar" :class="{ floating: navbarFloating }">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
                 <img class="logo" src="~/assets/images/logo.jpg" alt="Logo" />
               </a>
-              <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span
+                class="navbar-burger"
+                :class="{ 'is-active': navbarOpen }"
+                data-target="navbarMenuHeroC"
+                @click="navbarOpen = !navbarOpen"
+              >
                 <span></span>
                 <span></span>
                 <span></span>
               </span>
             </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
+            <div
+              id="navbarMenuHeroC"
+              class="navbar-menu"
+              :class="{ 'is-active': navbarOpen }"
+            >
               <div class="navbar-end">
-                <a class="navbar-item"> Início </a>
-                <a href="#about" class="navbar-item"> Quem somos </a>
-                <a href="#destinations" class="navbar-item"> Viagens </a>
-                <a href="#services" class="navbar-item"> Serviços </a>
-                <a href="#contact" class="navbar-item"> Contato </a>
+                <a
+                  href="#home"
+                  class="navbar-item"
+                  @click="navbarOpen = !navbarOpen"
+                >
+                  Início
+                </a>
+                <a
+                  href="#about"
+                  class="navbar-item"
+                  @click="navbarOpen = !navbarOpen"
+                >
+                  Quem somos
+                </a>
+                <a
+                  href="#destinations"
+                  class="navbar-item"
+                  @click="navbarOpen = !navbarOpen"
+                >
+                  Viagens
+                </a>
+                <a
+                  href="#services"
+                  class="navbar-item"
+                  @click="navbarOpen = !navbarOpen"
+                >
+                  Serviços
+                </a>
+                <a
+                  href="#contact"
+                  class="navbar-item"
+                  @click="navbarOpen = !navbarOpen"
+                >
+                  Contato
+                </a>
               </div>
             </div>
           </div>
@@ -446,7 +485,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from '@vue/composition-api'
+import { ref, onMounted, onUnmounted } from '@vue/composition-api'
 
 import ContactForm from '~/components/ContactForm'
 import InfoModal from '~/components/InfoModal'
@@ -465,10 +504,31 @@ export default {
       modalType.value = e
     }
 
+    const navbarOpen = ref(false)
+
+    const navbarFloating = ref(false)
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+
+    const handleScroll = (e) => {
+      const scrollY = window.scrollY
+      if (scrollY >= 1) {
+        navbarFloating.value = true
+      } else {
+        navbarFloating.value = false
+      }
+    }
+
     return {
       openModal,
       modalType,
       setModal,
+      navbarOpen,
+      navbarFloating,
     }
   },
 }

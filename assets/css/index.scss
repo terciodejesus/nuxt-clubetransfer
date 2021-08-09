@@ -11,8 +11,14 @@ body {
 }
 
 .navbar {
+  @include default-transition();
+
   .navbar-item {
     color: white;
+
+    @include mobile {
+      color: #103d4d;
+    }
 
     &:hover {
       background-color: transparent;
@@ -23,6 +29,16 @@ body {
       width: 120px;
       max-height: 120px;
     }
+  }
+
+  .navbar-burger {
+    color: $white;
+  }
+
+  &.floating {
+    position: fixed;
+    width: 100%;
+    background-color: #103d4d;
   }
 }
 
