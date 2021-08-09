@@ -70,13 +70,13 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <p class="title">Explore.<span>Descubra</span>.Compartilhe</p>
-          <p class="subtitle">
+          <h2 class="title">Explore.<span>Descubra</span>.Compartilhe</h2>
+          <h1 class="subtitle">
             Economize tempo e dinheiro viajando com o
             <span class="has-text-weight-semibold"
               >Clube Transfer Receptivo</span
             >
-          </p>
+          </h1>
           <a
             class="button"
             target="_blank"
@@ -168,7 +168,7 @@
                   <figure class="image is-4by3">
                     <img
                       src="~/assets/images/destinos/sauipe.jpg"
-                      alt="Placeholder image"
+                      alt="Costa do Sauípe"
                     />
                   </figure>
                 </div>
@@ -181,7 +181,7 @@
                   <figure class="image is-4by3">
                     <img
                       src="~/assets/images/destinos/vila_gale_mares.jpg"
-                      alt="Placeholder image"
+                      alt="Vila Galé Marés"
                     />
                   </figure>
                 </div>
@@ -194,7 +194,7 @@
                   <figure class="image is-4by3">
                     <img
                       src="~/assets/images/destinos/tivoli_praia.jpg"
-                      alt="Placeholder image"
+                      alt="Tivoli Praia do Forte"
                     />
                   </figure>
                 </div>
@@ -207,7 +207,7 @@
                   <figure class="image is-4by3">
                     <img
                       src="~/assets/images/destinos/iberostar.jpg"
-                      alt="Placeholder image"
+                      alt="Iberostar Praia do Forte"
                     />
                   </figure>
                 </div>
@@ -220,7 +220,7 @@
                   <figure class="image is-4by3">
                     <img
                       src="~/assets/images/destinos/grand_palladium.jpg"
-                      alt="Placeholder image"
+                      alt="Gran Palladium Imbassaí Resort"
                     />
                   </figure>
                 </div>
