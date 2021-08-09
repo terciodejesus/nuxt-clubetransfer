@@ -64,8 +64,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
-    'nuxt-facebook-pixel-module'
+    'nuxt-facebook-pixel-module',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://www.clubetransfer.com.br',
+    gzip: true
+  },
 
   facebook: {
     /* module options */

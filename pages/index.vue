@@ -308,10 +308,10 @@
               <div class="card">
                 <span class="title">Transfer Receptivo</span>
                 <div class="card-image">
-                  <figure class="image is-128x128">
+                  <figure class="image is-96x96">
                     <img
                       src="~/assets/images/transfer.jpg"
-                      alt="Placeholder image"
+                      alt="Transfer receptivo"
                     />
                   </figure>
                 </div>
@@ -328,13 +328,10 @@
             </div>
             <div class="column is-4">
               <div class="card">
-                <span class="title">Transfer Receptivo</span>
+                <span class="title">Party Day</span>
                 <div class="card-image">
-                  <figure class="image is-128x128">
-                    <img
-                      src="~/assets/images/party_day.jpg"
-                      alt="Placeholder image"
-                    />
+                  <figure class="image is-96x96">
+                    <img src="~/assets/images/party_day.jpg" alt="Party Day" />
                   </figure>
                 </div>
                 <div class="card-content">
@@ -353,17 +350,17 @@
               <div class="card">
                 <span class="title">City Tour</span>
                 <div class="card-image">
-                  <figure class="image is-128x128">
+                  <figure class="image is-96x96">
                     <img
                       src="~/assets/images/city_tour.jpg"
-                      alt="Placeholder image"
+                      alt="City Tour Salvador"
                     />
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="content">
-                    Te levamos aos pricipais pontos turistícos da Bahia onde
-                    voce irá conhecer um pouco da história do Brasil, Igrejas,
+                    Te levamos aos principais pontos turistícos da Bahia onde
+                    você irá conhecer um pouco da história do Brasil, Igrejas,
                     culturas e arquitetura barroca.
                   </div>
                 </div>
@@ -373,11 +370,8 @@
               <div class="card">
                 <span class="title">Vale viagens</span>
                 <div class="card-image">
-                  <figure class="image is-128x128">
-                    <img
-                      src="~/assets/images/gift.jpg"
-                      alt="Placeholder image"
-                    />
+                  <figure class="image is-96x96">
+                    <img src="~/assets/images/gift.jpg" alt="Vale viagens" />
                   </figure>
                 </div>
                 <div class="card-content">
