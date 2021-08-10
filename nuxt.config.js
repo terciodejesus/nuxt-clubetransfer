@@ -11,7 +11,9 @@ export default {
       { hid: 'description', name: 'description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
       { hid: 'og:title', property: 'og:title', content: 'Clube Transfer Receptivo' },
       { hid: 'og:description', property: 'og:description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.clubetransfer.com.br/logo_og.png' }
+      { hid: 'og:image', property: 'og:image', content: 'https://www.clubetransfer.com.br/logo_og.png' },
+      { hid: 'og:type', property: 'og:type', content: 'company' },
+      { hid: 'og:url', property: 'og:url', content: 'https://www.clubetransfer.com.br' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
