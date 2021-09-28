@@ -8,6 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'facebook-domain-verification', content: 'axhe40326wqv2bv00hw5hfw0xfejbz' },
       { hid: 'description', name: 'description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },
       { hid: 'og:title', property: 'og:title', content: 'Clube Transfer Receptivo' },
       { hid: 'og:description', property: 'og:description', content: 'Promovendo viagens com qualidade do aeroporto até os hotéis e eventos' },

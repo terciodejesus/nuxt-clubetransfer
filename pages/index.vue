@@ -80,7 +80,7 @@
           <a
             class="button"
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+            href="https://api.whatsapp.com/send?phone=5571982428566&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
           >
             <font-awesome-icon :icon="['fab', 'whatsapp']" />
             Reservar
@@ -238,7 +238,7 @@
           <a
             class="button cta-button"
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+            href="https://api.whatsapp.com/send?phone=5571982428566&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
           >
             <font-awesome-icon :icon="['fab', 'whatsapp']" />
             Reservar Agora
@@ -411,8 +411,8 @@
                   <span
                     ><a
                       target="_blank"
-                      href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
-                      >(71) 99712-7405</a
+                      href="https://api.whatsapp.com/send?phone=5571982428566&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+                      >(71) 98242-8566</a
                     ></span
                   >
                 </span>
@@ -469,7 +469,7 @@
 
     <a
       target="_blank"
-      href="https://api.whatsapp.com/send?phone=5571997127405&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
+      href="https://api.whatsapp.com/send?phone=5571982428566&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva"
     >
       <div class="floating-whatsapp">
         <font-awesome-icon :icon="['fab', 'whatsapp']" />
